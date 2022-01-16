@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai8</title>
+</head>
+<body>
+  <input type="button" id="play" value="choi" onclick="press()">
+<script>
+    let input1 = +prompt("nhap so tu so : ")
+    let input2 = +prompt(" den: ")
+    let input3 = +prompt("so ban chon trong khoang la: ")
+    let randomNum = Math.floor(Math.random()*(input1-input2)*-1)
+    let cnt = 3
+    while (cnt>0){
+        if (randomNum === input3){
+            alert("Chuc mung ban da chien thang !!!")
+            break;
+        }else  if(cnt<5){
+            alert("ko chinh xac mowi ban nhap lai!")
+            input3 = +prompt("so ban chon trong khoang la: ")
+            cnt++
+        }else {
+            alert("ban da thua!")
+            break
+        }
+    }
+</script>
+</body>
+</html>
